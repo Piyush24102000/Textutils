@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Textutils</title>
+    {% load static %}  
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">    
+ </head>
+<body>
+    <div class="wrapper">
+
+<div style= text-align:center>
+
+    <h1>Welcome to the text analyzer. Enter your text below</h1>
+    <form action='/analyze' method='POST'> {% csrf_token %}    
+    
+    <textarea name='text' style='margin: 0px; width: 721px; height: 93px;'></textarea>
+    <p style= text-align:center>
+     <button type='submit'> Analyze Text</button><br><br><br>
+    <input type="checkbox" name="removepunc"> Remove Punctuations<br>
+    <input type="checkbox" name="fullcaps"> UPPERCASE<br>
+    <input type="checkbox" name="extraspaceremover"> Extra Spaces Remover<br>
+    <input type="checkbox" name="newlineremover"> New Line Remover<br>
+
+</p>
+</div>
+</div>
+</form>
+</body>
+</html>
